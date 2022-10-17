@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+	--wc: hsl(210deg 50% 99%);
+	--dc: hsl(0deg 0% 2%);
+	--dtc: hsl(216deg 41% 16%);
+	--bc: hsl(196deg 100% 49%);
+	--gc: hsl(240deg 6% 34%);
+}
+body{
+	height: 100vh;
+	background: linear-gradient(
+		206deg, 
+		hsl(228deg 57% 8%)70%, 
+		hsl(210deg 34% 27%));
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 7%;
+}
+h3{
+	font-size: 35px;
+	font-family:'Ubuntu', sans-serif;
+	color: var(--bc);
+	cursor: grab;
+}
+.log{
+	font-size: 30px;
+	background: var(--bc);
+	border-radius: 5px;
+	color: var(--dtc);
+}
+nav ul{
+	margin-left: 130px;
+    list-style: none;
+}
+ul li{
+	display: inline-block;
+	padding: 0px 20px;
+}
+ul li a{
+	text-decoration: none;
+	font-family:'play', sans-serif;
+	color: var(--wc);
+	font-size: 20px;
+}
+ul li a i{
+	position: absolute;
+	font-size: 25px;
+	margin: -17px 0px 0px 30px;
+	text-decoration: none;
+	font-family:'play', sans-serif;
+	color: var(--wc);
+	font-weight: 500;
+	transition: all 0.3s ease 0s;
+	border-radius: 2px;
+}
+ul li a:hover, i:hover{
+	color: var(--bc);
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.material-symbols-outlined{
+	padding: 16px 16px;
+	cursor: pointer;
+	background: linear-gradient( 190deg, 
+		#306798, #61adf1);
+	border-radius: 50px;
+}
+.content{
+	position: absolute;
+	height: 800;
+	width: 50%;
+	right: 0;
+}
+.content h1{
+	font-size: 4.1em;
+	color: var(--wc);
+	letter-spacing: -4px;
+	font-family:'play', sans-serif;
+	font-weight: 800;
+	transform: translate(0px, -289%);
+}
+.content h5{
+	font-size: 1.03em;
+	color: var(--gc);
+	font-family:'Ubuntu', sans-serif;
+	font-weight: 800;
+	margin-top:-62%;
+}
+.hero{
+	position: relative;
+	left: 0;
+	margin-left: -103%;
+	width: 650px;
+	transform: rotate(-10deg);
+	margin-top: 30px;
+		transition: 4s;
+}
+.hero:hover{
+	transition: 4s;
+	transform: rotate(-2deg);
+}
+.btns{
+	position: absolute;
+	height: 100px;
+	width: 600px;
+	align-items: center;
+	display: flex;
+	justify-content: inherit;
+}
+.btns .price{
+	position: relative;
+	color: var(--wc);
+	font-size:30px;
+	letter-spacing: 3px;
+	font-weight: 900;
+	font-family:'Poppins', sans-serif;
+}
+.btns .buynow{
+	position: relative;
+	height: 50px;
+	width: 150px;
+	margin: 60px;
+	border-radius: 50px;
+    background: linear-gradient( 190deg, 
+		#306798, #61adf1);
+	color: var(--dc);
+	font-size:25px;
+	display: flex;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	font-family:'Poppins', sans-serif;
+}
+.btns .buynow:hover{
+	transition: .6s;
+	color: var(--wc);
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.products{
+	position: absolute;
+	height: 150px;
+	width: 670px;
+	right: 5%;
+	bottom: 7%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.products div{
+	height: 125px;
+	width: 300px;
+	background: linear-gradient(
+		206deg, 
+		hsl(228deg 57% 8%), 
+		#fff );
+	border: 1px solid #a1a1a1;
+	margin: 30px;
+	border-radius: 18px;
+	cursor: pointer;
+}
+.products div h2{
+	font-size: 15px;
+	color: var(--dtc);
+	font-family:'Ubuntu', sans-serif;
+	margin: 10px 10px;
+}
+.products div .price{
+	position: relative;
+	color: var(--dtc);
+	font-size:25px;
+	margin-left: 10px;
+	font-weight: 900;
+	font-family:'Poppins', sans-serif;
+}
+.products div span{
+	font-size: 15px;
+	transform: translate(-75px, 65px);
+}
+.products div img{
+	position: absolute;
+	height: 100px;
+	transform: translate(15px, -20px);
+}
+.product.one, .product.two{
+	transition: 3s;
+}
+.product.one img, .product.two img{
+	transition: 0.3s;
+}
+.product.one:hover{
+	color: var(--wc);
+	transform: rotate(-4deg);
+	transition: 3s;
+}
+.product.one:hover img{
+	transition: all 0.8s ease 0.2s;
+    transform: translate(30px, 20px);
+     margin-top: -30px;
+	transform: rotate(-45deg);
+}
+.product.two:hover{
+	color: var(--wc);
+	transform: rotate(4deg);
+	transition: 3.5s;
+}
+.product.two:hover img{
+	transition: all 0.8s ease 0.2s;
+    transform: translate(30px, 20px);
+     margin-top: -35px;
+	transform: rotate(-45deg);
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
